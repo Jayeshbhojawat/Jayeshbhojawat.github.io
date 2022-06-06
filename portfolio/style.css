@@ -88,7 +88,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: crimson;
+    background: #000000;
 }
 .navbar .max-width{
     display: flex;
@@ -182,14 +182,17 @@ section .title::after{
 }
 .home .home-content .text-1{
     font-size: 27px;
+    color: #FFFFFF;
 }
 .home .home-content .text-2{
     font-size: 75px;
+    color: #FFFFFF;
     font-weight: 600;
     margin-left: -3px;
 }
 .home .home-content .text-3{
     font-size: 40px;
+    color: #FFFFFF;
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
