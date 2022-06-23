@@ -310,7 +310,7 @@ section .title::after{
 /* project section khtm */
 
 /* Projects section */
-#projects .projects {
+/* #projects .projects {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
@@ -379,7 +379,7 @@ section .title::after{
 }
 #projects .project-item:hover .project-img img {
   transform: scale(1.1);
-}
+} */
 /* End Projects section */
 
 
