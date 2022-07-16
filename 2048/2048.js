@@ -4,8 +4,10 @@ document.addEventListener('DOMContentLoaded', () =>  {
     const resultDisplay = document.getElementById('result')
     let squares = []
     const width = 4
+//     width taken 4
     let score = 0
-  
+//   intial score taken zero 
+    
     //create the playing board
     function createBoard() {
       for (let i=0; i < width*width; i++) {
@@ -22,12 +24,17 @@ document.addEventListener('DOMContentLoaded', () =>  {
     //generate a new number
     function generate() {
       randomNumber = Math.floor(Math.random() * squares.length)
+//         math function to genereate random no.
       if (squares[randomNumber].innerHTML == 0) {
+//           check position where number is zero in matrix
         squares[randomNumber].innerHTML = 2
         checkForGameOver()
+//       before generating random number check each time 
+//           that game is over or not 
+//           all the numbers has been filled or not 
       } else generate()
     }
-  
+// -------------------------------------------------------------------------------------  
     function moveRight() {
       for (let i=0; i < 16; i++) {
         if (i % 4 === 0) {
@@ -49,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
         }
       }
     }
-  
+// -------------------------------------------------------------------------------------
     function moveLeft() {
       for (let i=0; i < 16; i++) {
         if (i % 4 === 0) {
@@ -72,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
       }
     }
   
+// -------------------------------------------------------------------------------------
   
     function moveUp() {
       for (let i=0; i < 4; i++) {
@@ -93,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
       }
     }
   
+// -------------------------------------------------------------------------------------
     function moveDown() {
       for (let i=0; i < 4; i++) {
         let totalOne = squares[i].innerHTML
@@ -112,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
         squares[i+(width*3)].innerHTML = newColumn[3]
       }
     }
-  
+// -------------------------------------------------------------------------------------
     function combineRow() {
       for (let i =0; i < 15; i++) {
         if (squares[i].innerHTML === squares[i +1].innerHTML) {
